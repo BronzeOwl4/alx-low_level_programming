@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -13,14 +14,14 @@ int main(void)
 	{
 		for (b = a; b <= 99; b++)
 		{
-			if (c != d)
+			if (a != b)
 			{
-				putchar(c /10 + '0');
-				putchar(c % 10 + '0');
+				putchar(a /10 + '0');
+				putchar(a % 10 + '0');
 				putchar(' ');
-				putchar(d / 10 + '0');
-				putchar(d % 10 + '0');
-				if (c != 98 || d != 99)
+				putchar(b / 10 + '0');
+				putchar(b % 10 + '0');
+				if (a != 98 || b != 99)
 				{
 					putchar(',');
 					putchar(' ');
