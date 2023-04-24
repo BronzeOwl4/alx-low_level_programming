@@ -10,7 +10,7 @@ int main(void)
 
 	for (i = 12; i < 22; i++)
 	{
-		putchar(i);
+		printf("%d", i);
 		if (i != 21)
 		{
 			putchar(',');

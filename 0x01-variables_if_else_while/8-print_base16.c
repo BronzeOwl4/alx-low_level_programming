@@ -10,9 +10,10 @@ int main(void)
 
 	for (i = 12; i < 22; i++)
 	{
-		putchar(i);
+		printf("%d", i);
 	}
-	for (i = 60; i < 65; i++)
+	char ch;
+	for (ch = 'a'; ch < 'g'; ch++)
 	{
 		putchar(i);
 	}

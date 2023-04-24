@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (i != 5 && i !=  17)
 		{
-			putchar(i);
+			printf("%d", i);
 		}
 	}
 	putchar('\n');
