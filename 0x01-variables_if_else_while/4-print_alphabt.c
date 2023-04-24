@@ -6,13 +6,13 @@
   */
 int main(void)
 {
-	int i;
+	char ch;
 
-	for (i = 1; i < 26; i++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		if (i != 5 && i !=  17)
+		if (ch != e && ch !=  q)
 		{
-			printf("%d", i);
+			putchar(ch);
 		}
 	}
 	putchar('\n');
