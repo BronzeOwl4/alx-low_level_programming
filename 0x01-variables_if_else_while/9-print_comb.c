@@ -8,10 +8,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 12; i < 22; i++)
+	for (i = 0; i < 10; i++)
 	{
 		printf("%d", i);
-		if (i != 21)
+		if (i != 9)
 		{
 			putchar(',');
 			putchar(' ');
