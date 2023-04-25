@@ -5,7 +5,7 @@
  * print_to_98 - prints all natural numbers
  *
  * @n: the starting number
- * @i: natural number
+ *
  * Return: from n to 98, followed by a new line
  */
 void print_to_98(int n)
