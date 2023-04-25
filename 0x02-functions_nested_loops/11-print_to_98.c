@@ -4,12 +4,13 @@
 /**
  * print_to_98 - prints all natural numbers
  *
- *@n: the starting number
+ * @n: the starting number
+ * @i: the second number
  * Return: from n to 98, followed by a new line
  */
 void print_to_98(int n)
 {
-	int i, n;
+	int i;
 
 	if (n <= 98)
 	{
