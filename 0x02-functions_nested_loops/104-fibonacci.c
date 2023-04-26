@@ -13,7 +13,7 @@ int main(void)
 	printf("%d, %d", a, b);
 	while (i <= 98)
 	{
-		c = a + b
+		c = a + b;
 			printf(", %d", c);
 		a = b;
 		b = c;
