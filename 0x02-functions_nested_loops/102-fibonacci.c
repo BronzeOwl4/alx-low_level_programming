@@ -8,13 +8,13 @@
 int main(void)
 {
 	int i = 3;
-	long long int a = 1, b = 2, c;
+	int a = 1, b = 2, c;
 
-	printf("%lld\n%lld\n", a, b);
+	printf("%d, %d", a, b);
 	while (i <= 50)
 	{
 		c = a + b;
-		printf("%lld\n", c);
+		printf(", %d", c);
 		a = b;
 		b = c;
 		i++;
