@@ -7,17 +7,22 @@
  */
 int main(void)
 {
-	int i = 3;
-	int a = 1, b = 2, c;
+	int d = 0;
+	long a = 1, b = 2;
 
-	printf("%d, %d", a, b);
-	while (i <= 50)
+	while (d < 50)
 	{
-		c = a + b;
-		printf(", %d", c);
-		a = b;
-		b = c;
-		i++;
+		if (d == 0)
+			printf("%ld", a);
+		else if (d == 1)
+			printf(", %ld", b);
+		else
+		{
+			b += a;
+			a = b - a;
+			printf(", %ld", b);
+		}
+		++d;
 	}
 	printf("\n");
 	return (0);
