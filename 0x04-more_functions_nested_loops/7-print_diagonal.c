@@ -1,4 +1,4 @@
-#include <stdio.h>
+i#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,26 +9,16 @@
  */
 void print_diagonal(int n)
 {
-	if (n > 0)
+	int i, j;
+	if (n <= 0)
+		_putchar('\n');
+	for (i = 0; i < n; i++)
 	{
-		int i = 0;
-		
-		while (i < n )
+		for (j =0; j < n; j++)
 		{
-			int j = 0;
-			
-			while (j < i)
-			{
-				_putchar(' ');
-				j++;
-			}
-			_putchar('\\');
-			_putchar('\n');
-			i++;
+			_putchar(' ');
 		}
-	}
-	else
-	{
+		_putchar('\\');
 		_putchar('\n');
 	}
 }

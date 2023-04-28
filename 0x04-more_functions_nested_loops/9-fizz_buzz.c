@@ -2,50 +2,27 @@
 #include "main.h"
 
 /**
- * more_numbers - prints an integer
+ * main - Entry point
  *
  * Return: Always 0
  */
-void more_numbers(void)
+int main(void)
 {
-	int i = 1;
+	int i;
 
-	if (i <= 100)
+	for (i = 1; i <= 100; i++)
 	{
-		_putchar(' ');
-	while (i <= 100)
-	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
-		}
+		if (i % 15 == 0)
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-		}
+			printf("Fizz");
 		else if (i % 5 == 0)
-		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
-		}
+			printf("Buzz");
 		else
-		{
-			_putchar('\n');
-		}
-			more_numbers(i);
-		i++;
+			printf("%i", i);
+		if (i < 100)
+			printf(" ");
 	}
-	}
+	printf("\n");
+	return (0);
 }
