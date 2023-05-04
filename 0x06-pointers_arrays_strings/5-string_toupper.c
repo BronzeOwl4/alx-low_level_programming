@@ -5,16 +5,18 @@
 
 /**
  * string_toupper - changes all lowercase letters of a string to uppercase
- * @str: pointer
+ *  @s: pointer
+ *
  * Return: Always 0
  */
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		str[i] = string_toupper(str[i]);
+		s[i] = toupper(s[i]);
 		i++;
 	}
+	return (s);
 }
