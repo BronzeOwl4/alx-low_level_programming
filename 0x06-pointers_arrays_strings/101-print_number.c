@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -17,12 +18,18 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		n = -n;
 	}
-	while (num / divisor > 9)
+	while (num)
 	{
-		_putchar('0' + num / divisor);
-		num %= divisor;
+		divisor *= 10;
+		num /= 10;
+	}
+	divisor /= 10;
+	while (divisor >= 1)
+	{
+		_putchar((n / divisor) + '0');
+		n %= divisor;
 		divisor /= 10;
 	}
 }
