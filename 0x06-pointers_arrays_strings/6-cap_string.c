@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <stdbool.h>
 #include "main.h"
 
 /**
@@ -12,19 +11,24 @@
  */
 char *cap_string(char *s)
 {
-	char separators[] = " \t\n,;.!?\"(){}";
-	bool new_word = true;
 	int i = 0;
 
 	while (s[i])
 	{
-		if (new_word && isalpha(s[i]))
-		{
-			s[i] = toupper(s[i]);
-			new_word = false;
-		}
-		else if (strchr(separators, s[i]))
-			new_word = true;
+		while (!(s[i] >= 'a' && s[i] < 'z'))
+			i++;
+		if (s[i - 1] == ' ' || s[i - 1] == '\t' || s[i - 1] == '\n' ||
+				s[i - 1] == ',' ||
+				s[i - 1] == ';' ||
+				s[i - 1] == '.' ||
+				s[i - 1] == '!' ||
+				s[i - 1] == '?' ||
+				s[i - 1] == '"' ||
+				s[i - 1] == '(' ||
+				s[i - 1] == ')' ||
+				s[i - 1] == '{' ||
+				s[i - 1] == '}' || i == 0)
+			s[i] -= 32;
 		i++;
 	}
 	return (s);
