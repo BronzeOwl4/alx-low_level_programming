@@ -17,15 +17,15 @@ char *leet(char *s)
 	{
 		char c = tolower(s[i]);
 
-		if (c == 'a' && 'A')
+		if (c == 'a' || c == 'A')
 			s[i] = '4';
-		else if (c == 'e' && 'E')
+		else if (c == 'e' || c == 'E')
 			s[i] = '3';
-		else if (c == 'o' && 'O')
+		else if (c == 'o' || c == 'O')
 			s[i] = '0';
-		else if (c == 't' && 'T')
+		else if (c == 't' || c == 'T')
 			s[i] = '7';
-		else if (c == 'l' && 'L')
+		else if (c == 'l' || c == 'L')
 			s[i] = '1';
 		i++;
 	}
