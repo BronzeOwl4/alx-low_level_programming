@@ -7,7 +7,7 @@
  * @c: character
  * @s: pointer
  *
- * Return: Always 0
+ * Return: pointer to the 1st occurrence of the character c in the string s, or NULL if the character is not found
  */
 char *_strchr(char *s, char c)
 {
