@@ -9,15 +9,13 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int ind;
-
 	while (*s)
 	{
 		int ind = 0;
 
-		while (accept[index])
+		while (accept[ind])
 		{
-			if (*s == accept[index])
+			if (*s == accept[ind])
 				return (s);
 			ind++;
 		}
