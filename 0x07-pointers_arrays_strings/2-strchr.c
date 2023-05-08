@@ -1,5 +1,3 @@
-#include <string.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,7 +5,7 @@
  * @c: character
  * @s: pointer
  *
- * Return: pointer to the 1st occurrence of the character c in the string s, or NULL if the character is not found
+ * Return: pointer to 1st occurrence of c in string s, or NULL if c not found
  */
 char *_strchr(char *s, char c)
 {
