@@ -2,25 +2,26 @@
 
 /**
  * _strpbrk - searches a string for any of a set of bytes.
- * @s: string one
- * @accept: string two
+ * @s: string to be searched
+ * @accept: sett of bytes searched for
  *
  * Return: pointer or null
  */
 char *_strpbrk(char *s, char *accept)
 {
-	char *p;
+	int ind;
 
-	while(*s)
+	while (*s)
 	{
-		p = accept;
-		while (*p)
+		int ind = 0;
+
+		while (accept[index])
 		{
-			if (*s == *p)
+			if (*s == accept[index])
 				return (s);
-			p++;
+			ind++;
 		}
 		s++;
 	}
-	return (0);
+	return ('\0');
 }
