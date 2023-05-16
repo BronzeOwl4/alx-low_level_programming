@@ -4,13 +4,13 @@
 /**
  * _strdup - returns a pointer to a newly allocated space in memory
  * @str: pointer
- * @new_str: new string
  *
  * Return: a pointer
  */
 char *_strdup(char *str)
 {
 	char *new_str;
+
 	if (str == NULL)
 		return (NULL);
 	new_str = malloc(strlen(str) + 1);
