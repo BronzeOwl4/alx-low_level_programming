@@ -43,16 +43,12 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-	if (b != 0)
+	if (b == 0)
 	{
-		return (a / b);
+		printf("Error\n");
+		exit(100);
 	}
-	else
-	{
-		/* Handle division by zero error */
-		printf("Error: Division by zero\n");
-		return (0);
-	}
+	return (a / b);
 }
 /**
  * op_mod - calculate remainder of division of two integers
@@ -63,14 +59,10 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	if (b != 0)
+	if (b == 0)
 	{
-		return (a % b);
+		printf("Error\n");
+		exit(100);
 	}
-	else
-	{
-		/* Handle division by zero error */
-		printf("Error: Division by zero\n");
-		return (0);
-	}
+	return (a % b);
 }
