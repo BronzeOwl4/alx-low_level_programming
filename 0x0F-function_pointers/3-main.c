@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
-int (*get_op_func(char *s))(int, int);
-
 /**
  * main - Entry point
  * @argc: The number of command-line arguments
@@ -13,25 +11,29 @@ int (*get_op_func(char *s))(int, int);
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
+	int num1, num2;
 	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
-		printf("Usage: %s num1 operator num2\n", argv[0]);
-		return (1);
+		printf("Error\n");
+		exit(98);
 	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-
+	if (argv[2][1])
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	operation = get_op_func(argv[2]);
 
 	if (operation == NULL)
 	{
-		printf("Error: Invalid operator\n");
-		return (1);
+		printf("Error\n");
+		exit(99);
 	}
-	result = operation(num1, num2);
-	printf("%d\n", result);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
+	printf("%d\n", operation(num1, num2));
 	return (0);
 }
