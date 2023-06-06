@@ -14,33 +14,20 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	listint_t *newer;
 	unsigned int a;
 
-	switch (!*head)
+	if (*head == NULL)
+		exit(-1);
+	if (index == 0)
 	{
-		case 1:
-			return (-1);
-		default:
-			break;
-	}
-	switch (index)
-	{
-		case 0:
-			*head = new->next;
-			free(new);
-			return (1);
-		default:
-			break;
+		*head = new->next;
+		free(new);
+		exit(1);
 	}
 	for (a = 0; new != NULL && a < index - 1; a++)
 		new = new->next;
-	switch (!new || !new->next)
-	{
-		case 1:
-			return (-1);
-		default:
-			break;
-	}
+	if (new == NULL || new->next == NULL)
+		exit(-1);
 	newer = new->next->next;
 	free(new->next);
 	new->next = newer;
-	return (1);
+	exit(1);
 }
