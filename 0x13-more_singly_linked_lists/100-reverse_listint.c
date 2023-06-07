@@ -28,5 +28,5 @@ listint_t *reverse_listint_helper(listint_t *prev, listint_t *curr)
 listint_t *reverse_listint(listint_t **head)
 {
 	*head = reverse_listint_helper(NULL, *head);
-	return *head;
+	return (*head);
 }
