@@ -8,10 +8,10 @@
  */
 int get_endianness(void)
 {
-	union {
-		int i;
-		char c[sizeof(int)];
-	} u;
-	u.i = 1;
-	return (u.c[0]);
+	int number = 1;
+
+	if (*(char *)&number == 1)
+		return (1);
+	else
+		return (0);
 }
