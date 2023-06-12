@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "main.h"
 #include <string.h>
+#include <fcntl.h>  // for open
+#include <unistd.h> // for write and close
 
 /**
  * create_file - creates a file with given content
