@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "main.h"
 #include <string.h>
-#include <fcntl.h>  // for open
-#include <unistd.h> // for write and close
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
  * create_file - creates a file with given content
@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	filejam = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
-	if (!filejam == -1)
+	if (filejam == -1)
 		return (-1);
 	if (text_content)
 	{
