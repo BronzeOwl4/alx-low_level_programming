@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include "main.h"
@@ -17,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t sum, read_o, write_one;
 	char buf[BUFSIZE];
 
-	if (filename == NUll)
+	if (filename == NULL)
 		return (0);
 	text = open(filename, O_RDONLY);
 	if (text == -1)
