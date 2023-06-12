@@ -12,22 +12,21 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	FILE *filejam;
+	int filejam;
 
 	if (!filename)
 		return (-1);
-	filejam = fopen(filename, "w");
+	filejam = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
 	if (!filejam)
 		return (-1);
 	if (text_content)
 	{
-		if (fwrite(text_content, sizeof(char), strlen(text_content), filejam) !=
-				strlen(text_content))
+		if (write(filejam, text_content, strlen(text_content)) == -1)
 		{
-			fclose(filejam);
 			return (-1);
 		}
 	}
-	fclose(filejam);
+	close(filejam);
 	return (1);
 }
